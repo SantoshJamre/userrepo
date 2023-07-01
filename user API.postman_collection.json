@@ -1,0 +1,408 @@
+{
+	"info": {
+		"_postman_id": "dca2aa7a-35c0-4d67-a36e-bd2adc29c9dd",
+		"name": "user API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "14661546",
+		"_collection_link": "https://lively-rocket-605022.postman.co/workspace/Voot~0bbb1de4-9f93-4e0e-96fb-23598f88e9bb/collection/14661546-dca2aa7a-35c0-4d67-a36e-bd2adc29c9dd?action=share&creator=14661546&source=collection_link"
+	},
+	"item": [
+		{
+			"name": "sign-up",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"mobile\":\"1234567890\",\r\n    \"countryCode\":\"+91\",\r\n    \"email\": \"dummyemail3@gmail.com\",\r\n    \"password\": \"abc123\",\r\n    \"name\": \"santoshjsss\",\r\n    \"address\": \"indore, MP, India\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8000/v1/sign-up",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"v1",
+						"sign-up"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"mobileOrEmail\": \"dummyemail2@gmail.com\",\r\n    \"password\": \"abc123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8000/v1/login",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"v1",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "forgot-password",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"dummyemail2@gmail.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8000/v1/forgot-password",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"v1",
+						"forgot-password"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "reset password",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"dummyemail2@gmail.com\",\r\n    \"otp\":\"LY8DCQ\",\r\n    \"newpassword\":\"abc123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8000/v1/reset-password",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"v1",
+						"reset-password"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update profile",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "accesstoken",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NDlkMzUwY2FmODQ0N2U4OTU4N2VjYjgiLCJpYXQiOjE2ODgyMDMwMjAsImV4cCI6MTY4OTA2NzAyMCwiaXNzIjoidGVzdCJ9.a5Hhk1cP0hLipk-5vihD84gggOuYyCcatyfgj4D2oj4",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"santoshjsss\",\r\n    \"address\": \"indore, MP, India\",\r\n    \"password\":\"abc123\",\r\n    \"latitude\":\"38.8977330\",\r\n    \"longitude\":\"-77.0365310\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8000/v1/update-profile/649d350caf8447e89587ecb8",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"v1",
+						"update-profile",
+						"649d350caf8447e89587ecb8"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get friend list",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "accesstoken",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NDlkMzUwY2FmODQ0N2U4OTU4N2VjYjgiLCJpYXQiOjE2ODgyMDUwODAsImV4cCI6MTY4OTA2OTA4MCwiaXNzIjoidGVzdCJ9.oY5J8fdtqHjlWtdMGVcmBW6XlbiYtsTIbaujzwvu_WI",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8000/v1/friend-list/649d350caf8447e89587ecb8",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"v1",
+						"friend-list",
+						"649d350caf8447e89587ecb8"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "view profile",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "accesstoken",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NDlkMzUwY2FmODQ0N2U4OTU4N2VjYjgiLCJpYXQiOjE2ODgyMDUwODAsImV4cCI6MTY4OTA2OTA4MCwiaXNzIjoidGVzdCJ9.oY5J8fdtqHjlWtdMGVcmBW6XlbiYtsTIbaujzwvu_WI",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"santoshjsss\",\r\n    \"address\": \"indore, MP, India\",\r\n    \"password\":\"abc123\",\r\n    \"email\":\"dummyemail@gmail.com\",\r\n    \"latitude\":\"38.8977330\",\r\n    \"longitude\":\"-77.0365310\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8000/v1/fetch-profile/649d350caf8447e89587ecb8",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"v1",
+						"fetch-profile",
+						"649d350caf8447e89587ecb8"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add friend",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "accesstoken",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NDlkMzUwY2FmODQ0N2U4OTU4N2VjYjgiLCJpYXQiOjE2ODgyMDUwODAsImV4cCI6MTY4OTA2OTA4MCwiaXNzIjoidGVzdCJ9.oY5J8fdtqHjlWtdMGVcmBW6XlbiYtsTIbaujzwvu_WI",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\r\n    \"friendUid\":\"649d33221df354bd075a81bf\",\r\n    \"action\":\"accept\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8000/v1/friend-request/649d350caf8447e89587ecb8",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"v1",
+						"friend-request",
+						"649d350caf8447e89587ecb8"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "friend request",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "accesstoken",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NDlkMzUwY2FmODQ0N2U4OTU4N2VjYjgiLCJpYXQiOjE2ODgyMDUwODAsImV4cCI6MTY4OTA2OTA4MCwiaXNzIjoidGVzdCJ9.oY5J8fdtqHjlWtdMGVcmBW6XlbiYtsTIbaujzwvu_WI",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\r\n    \"friendUid\":\"649d33221df354bd075a81bf\",\r\n    \"action\":\"request\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8000/v1/friend-request/649d350caf8447e89587ecb8",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"v1",
+						"friend-request",
+						"649d350caf8447e89587ecb8"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "remove firend",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "accesstoken",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NDlkMzUwY2FmODQ0N2U4OTU4N2VjYjgiLCJpYXQiOjE2ODgyMDUwODAsImV4cCI6MTY4OTA2OTA4MCwiaXNzIjoidGVzdCJ9.oY5J8fdtqHjlWtdMGVcmBW6XlbiYtsTIbaujzwvu_WI",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\r\n    \"friendUid\":\"649d33221df354bd075a81bf\",\r\n    \"action\":\"remove\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8000/v1/friend-request/649d350caf8447e89587ecb8",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"v1",
+						"friend-request",
+						"649d350caf8447e89587ecb8"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "reject friend",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "accesstoken",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NDlkMzUwY2FmODQ0N2U4OTU4N2VjYjgiLCJpYXQiOjE2ODgyMDUwODAsImV4cCI6MTY4OTA2OTA4MCwiaXNzIjoidGVzdCJ9.oY5J8fdtqHjlWtdMGVcmBW6XlbiYtsTIbaujzwvu_WI",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\r\n    \"friendUid\":\"649d33221df354bd075a81bf\",\r\n    \"action\":\"reject\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8000/v1/friend-request/649d350caf8447e89587ecb8",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"v1",
+						"friend-request",
+						"649d350caf8447e89587ecb8"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "search friend",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "accesstoken",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NDlkMzUwY2FmODQ0N2U4OTU4N2VjYjgiLCJpYXQiOjE2ODgyMDUwODAsImV4cCI6MTY4OTA2OTA4MCwiaXNzIjoidGVzdCJ9.oY5J8fdtqHjlWtdMGVcmBW6XlbiYtsTIbaujzwvu_WI",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"uid\":\"649d350caf8447e89587ecb8\",\r\n    \"email\":\"dummyemail@gmail.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8000/v1/search-friend",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"v1",
+						"search-friend"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
